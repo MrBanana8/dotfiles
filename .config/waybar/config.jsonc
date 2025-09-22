@@ -1,0 +1,118 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin": "0",
+
+  // Order of modules on each side
+  "modules-left": [
+      "hyprland/workspaces",
+      "tray"
+  ],
+  "modules-center": [
+    "window"
+  ],
+  "modules-right": [
+      "hyprland/language",
+      "memory",
+      "pulseaudio",
+      "network",
+      //"battery",
+      //"cpu",
+      //"backlight",
+      //"custom/vpn",
+      //"idle_inhibitor",
+      "clock#date",
+      "clock#time",
+      "custom/power"
+  ],
+
+  // Workspaces (Hyprland/Sway)
+  "workspaces": {
+  "all-outputs": true,
+  "on-click": "activate"
+},
+
+  "clock#time": {
+  "format": "{:%H:%M}",
+  "markup": "pango"
+},
+
+"clock#date": {
+  "format": "{:%A, %d/%m/%y} ",
+  "markup": "pango"
+},
+
+  "pulseaudio": {
+    "format": "   {volume}%",
+    "format-muted": "",
+    "on-click":"pavucontrol",
+    "tooltip": true
+  },
+
+  "network": {
+    "format-wifi": "    {essid}",
+    "format-ethernet": " {ifname}: {ipaddr}",
+    "format-disconnected": ""
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time}",
+    "tooltip": true
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": "  {used:0.1f}G / {total:0.1f}G",
+    "tooltip": true
+  },
+
+  "disk": {
+    "format": " {free}",
+    "path": "/",
+    "tooltip": true
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "tooltip": true
+  },
+
+  "custom/vpn": {
+    "format": " VPN",
+    "tooltip": false,
+    "exec": "echo connected" // replace with your VPN status script
+  },
+
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wlogout" // or your preferred power menu
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+
+  "language": {
+  "format": "{short}",
+  "format-en": "EN",
+  "format-he": "HE", 
+  "tooltip": false
+},
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  }
+}
