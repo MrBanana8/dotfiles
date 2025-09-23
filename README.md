@@ -17,9 +17,8 @@ pacman -S stow
 
 ### Installation
 
-First, make sure the dotfiles are in your $HOME directory using git
-
 ```
+$ cd ~
 $ git clone git@github.com:MrBanana8/dotfiles.git
 $ cd dotfiles
 ```
