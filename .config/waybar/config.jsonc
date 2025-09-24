@@ -91,7 +91,7 @@
   },
 
   "custom/power": {
-    "format": "",
+    "format": "⏻",
     "tooltip": false,
     "on-click": "wlogout" // or your preferred power menu
   },
