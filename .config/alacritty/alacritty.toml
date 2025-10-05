@@ -1,7 +1,5 @@
 [window]
 opacity = 0.9
-decorations = "full"
-decorations_theme_variant = "Dark"
 
 [window.padding]
 x = 8
