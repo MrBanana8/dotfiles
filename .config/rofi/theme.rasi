@@ -1,0 +1,78 @@
+/* Pywal-integrated Rofi theme (matches colors-rofi-dark.rasi structure) */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+/* -------------------- Base -------------------- */
+* {
+    background-color:  @normal-background;
+    text-color:        @normal-foreground;
+    border-color:      @selected-normal-background;
+}
+
+/* -------------------- Window -------------------- */
+window {
+    transparency:      "real";
+    width:             40%;
+    border:            2px;
+    border-radius:     12px;
+    border-color:      @selected-normal-background;
+    padding:           20px;
+    background-color:  @normal-background;
+}
+
+/* -------------------- Layout -------------------- */
+mainbox {
+    spacing:           10px;
+    children:          [ "inputbar", "listview" ];
+}
+
+/* -------------------- Input Bar -------------------- */
+inputbar {
+    padding:           8px 16px;
+    border-radius:     6px;
+    border:            1px;
+    border-color:      @selected-normal-background;
+    background-color:  @normal-background;
+    text-color:        @normal-foreground;
+}
+
+prompt {
+    text-color:        @urgent-background;
+}
+
+entry {
+    placeholder:       "Search...";
+    text-color:        @normal-foreground;
+}
+
+/* -------------------- Listview -------------------- */
+listview {
+    lines:             8;
+    columns:           1;
+    spacing:           6px;
+    padding:           6px 0px;
+    scrollbar:         false;
+    background-color:  transparent;
+}
+
+/* -------------------- Elements -------------------- */
+element selected {
+    border: 0px;
+    padding: 2px 6px;
+    margin: 0px;
+}
+
+element-icon {
+    size:              2em;
+}
+
+element-text {
+    vertical-align:    0.5;
+    horizontal-align:  0.0;
+    padding:           0px 10px;
+}
+
+/* -------------------- Message -------------------- */
+message {
+    padding:           10px;
+    text-color:        @selected-active-background;
+}

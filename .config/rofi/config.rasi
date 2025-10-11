@@ -1,0 +1,8 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    drun-display-format: "{name}";
+    font: "Hack Nerd Font 12";
+}
+
+@theme "~/.config/rofi/theme.rasi"
