@@ -12,11 +12,12 @@ PS1='[\u@\h \W]\$ '
 
 
 fastfetch
-#wal -R &>/dev/null
 if [[ -f ~/.cache/wal/sequences ]]; then
     (sleep 0.02; cat ~/.cache/wal/sequences >/dev/tty) &>/dev/null
 fi
 #cat ~/.cache/wal/sequences &
+eval "$(fzf --bash)"
+
 
 export PATH=~/.npm-global/bin:$PATH
 
