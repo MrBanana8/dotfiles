@@ -11,7 +11,7 @@
 window#waybar {
     background: transparent;
     /* lighten background */
-    background-color: rgba(30, 30, 30, 0.9); /* slightly lighter than pure dark */
+    background-color: @background; /* slightly lighter than pure dark */
     color: @foreground;
     transition-property: background-color;
     transition-duration: 0.1s;
